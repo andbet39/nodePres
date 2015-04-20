@@ -1,18 +1,15 @@
 
-
-
 <div class="row">
     <button type="button" ng-click="toggleEditMode()">{{editmode ? 'Disable Editing' : 'Enable Editing'}}</button>
     <button type="button" ng-click="saveArticle(article)">Save</button>
     <button type="button" ng-click="updateArticle(article)">Update</button>
+    <button type="button" ng-click="surroundSelection()">test</button>
 </div>
 <div class="row">
     <div  class="col-md-8 col-sm-12 col-md-offset-2 col-sm-offset-0 content">
-       <h1> <div ng-attr-contenteditable="{{editmode}}" ng-model="article.title">{{article.title}}</div></h1>
-        <hr/>
-        <p><span class="glyphicon glyphicon-time"></span>Posted on {{article.postedOn | date:'medium'}} </p>
-        <hr/>
-       <div class="article_content" ng-attr-contenteditable="{{ editmode }}" ng-model="article.content"><p>{{article.content}}</p></div>
+        <h1 ng-model="article.title" medium-editor options='{"placeholder": "Enter a title", "disableToolbar": true, "forcePlainText": true, "disableReturn": true}'></h1>
+
+        <p class="article" ng-model="article.content" medium-editor options='{"buttons": ["bold", "italic", "highlight"]}' bind-options="mediumBindOptions"></p>
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-var app= angular.module('myApp', ['ngRoute',])
+var app= angular.module('myApp', ['ngRoute','angular-medium-editor'])
 
 .config(['$routeProvider',
     function($routeProvider) {

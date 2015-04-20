@@ -1,8 +1,6 @@
-.article_content {
+
+.article {
+    font-family: 'Lora';
     font-size: 1.4em;
     font-weight: 400;
-}
-
-.content {
-    font-family: 'Lora';
 }
